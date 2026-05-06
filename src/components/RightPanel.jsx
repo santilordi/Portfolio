@@ -8,12 +8,14 @@ function RightPanel() {
         {
             title: 'TechnoLife - E-commerce',
             description: 'Robust backend developed with Spring Boot, JPA and MySQL for product and shopping cart management',
-            tags: ['Java', 'Spring Boot', 'MySQL', 'REST API']
+            tags: ['Java', 'Spring Boot', 'MySQL', 'REST API'],
+            githubLink: 'https://github.com/santilordi/TechnoLife.git'
         },
         {
             title: "Credit & Collections Management System",
             description: "A comprehensive full-stack platform developed to manage clients, credit lines, and payment collections. The robust backend is engineered with Java and Spring Boot, implementing secure RESTful APIs with JWT-based authentication via Spring Security. The frontend is a responsive single-page application built with React and Vite, utilizing Redux Toolkit for efficient global state management and a seamless user experience.",
-            tags: ["Java", "Spring Boot", "React", "Redux", "JWT", "Vite"]
+            tags: ["Java", "Spring Boot", "React", "Redux", "JWT", "Vite"],
+            githubLink: 'https://github.com/santilordi/Grupo14-TPO-API.git'
         }
     ];
 
@@ -39,6 +41,7 @@ function RightPanel() {
                             title={project.title}
                             description={project.description}
                             tags={project.tags}
+                            githubLink={project.githubLink}
                         />
                     ))}
                 </div>

@@ -165,11 +165,22 @@ h2 {
   flex-direction: column;
 }
 
+.project-card-link {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+  width: 100%;  /* ← Agregar esto */
+  cursor: pointer;
+}
+
+.projects-list .project-card-link:hover {
+  opacity: 1 !important;
+}
+
 .project-card {
   transition: all 0.3s ease;
   border-radius: 8px;
   padding: 20px;
-  /* Eliminar bordes para un diseño más limpio similar a Brittany */
   border: none;
 }
 
@@ -190,6 +201,16 @@ h2 {
   color: #e2e8f0; /* Blanco puro en lugar de verde aqua */
   font-size: 1.3rem;
   margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-card:hover h3::after {
+  content: "↗";
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+  transform: translate(3px, -3px);
 }
 
 .project-card p {
