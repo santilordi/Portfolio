@@ -21,20 +21,27 @@ function RightPanel() {
         <main className="right-panel">
 
             <section id="about" className="section-padding">
-                I'm a Software Engineering student at UADE, dedicated to building robust, efficient, and scalable applications. With a strong foundation in backend architecture and a growing passion for modern frontend development, I thrive on solving complex technical challenges. I'm driven by a continuous desire to learn—whether it's optimizing an API's performance or exploring network protocols—always aiming to deliver seamless and impactful digital experiences.
+                <p className="about-text">
+                    I'm a Software Engineering student at UADE, dedicated to building robust, efficient, and scalable applications. With a strong foundation in backend architecture and a growing passion for modern frontend development, I thrive on solving complex technical challenges.
+                </p>
+                <p className="about-text">
+                    I'm driven by a continuous desire to learn—whether it's optimizing an API's performance or exploring network protocols—always aiming to deliver seamless and impactful digital experiences.
+                </p>
             </section>
 
             <SkillsSection />
 
             <section id="projects" className="section-padding">
-                {projectData.map((project, index) => (
-                    <ProjectCard 
-                        key={index}
-                        title={project.title}
-                        description={project.description}
-                        tags={project.tags}
-                    />
-                ))}
+                <div className="projects-list"> {/* <-- Este div nuevo es la clave */}
+                    {projectData.map((project, index) => (
+                        <ProjectCard
+                            key={index}
+                            title={project.title}
+                            description={project.description}
+                            tags={project.tags}
+                        />
+                    ))}
+                </div>
             </section>
         </main>
     )
