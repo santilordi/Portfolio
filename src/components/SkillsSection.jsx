@@ -11,7 +11,6 @@ function SkillsSection() {
         { name: 'Vite', color: '#646cff' },
         { name: 'Spring Cloud', color: '#6db33f' },
         { name: 'Docker', color: '#2496ed' },
-        { name: 'Microservices', color: '#ffffff' },
         { name: 'Spring Security', color: '#6db33f' }
     ];
 
