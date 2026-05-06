@@ -7,14 +7,11 @@ function LeftPanel() {
     useEffect(() => {
         const handleScroll = () => {
             const sections = document.querySelectorAll('section[id]');
-            let currentSection = 'about'; // Por defecto, siempre marcamos About
+            let currentSection = 'about';
 
             sections.forEach((section) => {
-                // Obtenemos a qué distancia está la sección desde arriba de todo
                 const sectionTop = section.offsetTop;
 
-                // Restamos unos píxeles (ej. 200) para que la línea cambie 
-                // un poquito antes de que la sección toque el techo del navegador
                 if (window.scrollY >= sectionTop - 200) {
                     currentSection = section.getAttribute('id');
                 }
@@ -23,14 +20,10 @@ function LeftPanel() {
             setActiveSection(currentSection);
         };
 
-        // Escuchamos el evento de scroll del mouse
         window.addEventListener('scroll', handleScroll);
 
-        // Lo ejecutamos una vez manualmente apenas carga la página 
-        // para asegurarnos de que "About" se marque estando arriba de todo
         handleScroll();
 
-        // Limpieza del evento cuando cerramos el componente
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 

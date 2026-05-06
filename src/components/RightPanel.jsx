@@ -34,7 +34,7 @@ function RightPanel() {
             <SkillsSection />
 
             <section id="projects" className="section-padding">
-                <div className="projects-list"> {/* <-- Este div nuevo es la clave */}
+                <div className="projects-list">
                     {projectData.map((project, index) => (
                         <ProjectCard
                             key={index}

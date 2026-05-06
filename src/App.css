@@ -1,9 +1,8 @@
 section[id] {
-  scroll-margin-top: 96px; /* El espacio que deja arriba al hacer clic en el enlace */
-  margin-bottom: 220px; /* Aumentamos el espacio entre secciones (antes era 96px) */
+  scroll-margin-top: 96px;
+  margin-bottom: 220px;
 }
 
-/* Configuración general y fondo oscuro */
 .portfolio-container {
   background-color: #0f172a; 
   color: slategray; 
@@ -54,7 +53,6 @@ h2 {
   font-size: 1.05rem; 
 }
 
-/* --- NAVEGACIÓN --- */
 .nav-menu ul {
   list-style: none;
   padding: 0;
@@ -90,37 +88,33 @@ h2 {
   transition: all 0.3s ease;
 }
 
-/* Efecto Hover y Clase ACTIVE (Scroll Spy) */
 .nav-menu a:hover .nav-indicator,
 .nav-menu a.active .nav-indicator {
-  width: 65px; /* Se estira hacia la derecha */
+  width: 65px;
   background-color: #e2e8f0;
 }
 
-/* Efecto hover en el menú */
 .nav-menu a:hover .nav-text,
 .nav-menu a.active .nav-text {
   color: #e2e8f0;
 }
 
 
-/* --- REDES SOCIALES --- */
 .social-links {
   display: flex;
-  gap: 24px; /* Espacio entre los iconos */
+  gap: 24px;
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-top: 40px; /* Margen por si la pantalla es muy pequeña */
+  margin-top: 40px;
 }
 
 .social-links a {
-  color: #94a3b8; /* Gris azulado base */
+  color: #94a3b8;
   display: block;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Efecto hover: se pone blanco y se levanta sutilmente */
 .social-links a:hover {
   color: #e2e8f0;
   transform: translateY(-3px);
@@ -129,10 +123,9 @@ h2 {
 .social-links svg {
   width: 24px;
   height: 24px;
-  fill: currentColor; /* Esto hace que el SVG tome el color del 'a' (y su hover) */
+  fill: currentColor;
 }
 
-/* --- PANEL DERECHO CON SCROLL --- */
 .right-panel {
   width: 55%;
   padding: 96px 0;
@@ -145,11 +138,10 @@ h2 {
 .about-text {
   color: #94a3b8;
   font-size: 1.1rem;
-  line-height: 1.7; /* Da espacio entre las líneas de texto */
+  line-height: 1.7;
   margin-bottom: 16px;
 }
 
-/* --- ESTILOS DE TARJETAS --- */
 .section-subtitle {
   color: #94a3b8;
   font-size: 0.85rem;
@@ -169,7 +161,7 @@ h2 {
   text-decoration: none;
   display: block;
   color: inherit;
-  width: 100%;  /* ← Agregar esto */
+  width: 100%;
   cursor: pointer;
 }
 
@@ -191,14 +183,14 @@ h2 {
 }
 
 .project-card:hover {
-  background: rgba(255, 255, 255, 0.08); /* Se ilumina el fondo */
+  background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.1);
-  transform: translateY(-8px); /* Se levanta más notoriamente */
-  box-shadow: 0 10px 30px -15px rgba(0,0,0,0.5); /* Sombra debajo */
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px -15px rgba(0,0,0,0.5);
 }
 
 .project-card h3 {
-  color: #e2e8f0; /* Blanco puro en lugar de verde aqua */
+  color: #e2e8f0;
   font-size: 1.3rem;
   margin-bottom: 12px;
   display: flex;
@@ -219,7 +211,6 @@ h2 {
   line-height: 1.6;
 }
 
-/* FIX PARA EL REFLECTOR Y CLASES UTILITARIAS */
 .pointer-events-none { pointer-events: none; }
 .fixed { position: fixed; }
 .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
@@ -244,7 +235,6 @@ h2 {
   font-weight: bold;
 }
 
-/* --- SKILLS SECTION --- */
 .skills-header {
   margin-bottom: 24px;
 }
@@ -258,16 +248,14 @@ h2 {
 .skills-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Espacio entre los círculos */
+  gap: 20px;
   align-items: center;
 }
 
-/* El diseño del círculo oscuro */
 .skill-circle {
   width: 85px;
   height: 85px;
   border-radius: 50%;
-  /* Usamos la variable de color para el borde y el texto por defecto */
   border: 2px solid var(--hover-color);
   color: var(--hover-color);
   background-color: rgba(30, 41, 59, 0.4); 
@@ -281,21 +269,19 @@ h2 {
 }
 
 .skill-circle:hover {
-  /* Brillo intenso hacia afuera y hacia adentro */
   box-shadow: 0 0 20px var(--hover-color), inset 0 0 15px rgba(255,255,255,0.1);
-  background-color: var(--hover-color); /* Se rellena del color */
-  color: #0f172a; /* Letra oscura para contrastar con el color brillante */
+  background-color: var(--hover-color);
+  color: #0f172a;
   transform: translateY(-5px) scale(1.1);
 }
 
-/* --- RESPONSIVE (MÓVILES) --- */
 @media (max-width: 768px) {
   .content-wrapper {
-    flex-direction: column; /* Apila los paneles uno sobre otro */
+    flex-direction: column;
   }
   
   .left-panel {
-    position: static; /* Quita el comportamiento fijo */
+    position: static;
     width: 100%;
     height: auto;
     padding: 48px 0;

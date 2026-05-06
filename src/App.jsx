@@ -17,15 +17,12 @@ function App() {
 
   return (
     <div className="portfolio-container">
-      {/* El div que actúa como reflector siguiendo el mouse */}
       <div 
         className="pointer-events-none fixed inset-0 z-0 transition duration-300"
         style={{
           background: `radial-gradient(600px circle at ${mousePos.x}px ${mousePos.y}px, rgba(29, 78, 216, 0.15), transparent 80%)`
         }}
       />
-      
-      {/* Contenido principal */}
       <div className="content-wrapper relative z-10">
         <LeftPanel />
         <RightPanel />
