@@ -34,6 +34,9 @@ function RightPanel() {
             <SkillsSection />
 
             <section id="projects" className="section-padding">
+                <div className="projects-header">
+                    <p className="section-subtitle">Projects I've worked on</p>
+                </div>
                 <div className="projects-list">
                     {projectData.map((project, index) => (
                         <ProjectCard
