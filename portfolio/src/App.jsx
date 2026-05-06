@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import LeftPanel from './components/LeftPanel'
+import RightPanel from './components/RightPanel'
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <div className='portfolio-container'>
       <div className='content-wrapper'>
         <LeftPanel/>
+        <RightPanel/>
       </div>
     </div>
   )
