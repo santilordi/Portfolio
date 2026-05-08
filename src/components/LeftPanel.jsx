@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import logo from "../assets/logo.PNG";
 
 function LeftPanel() {
 
@@ -30,6 +31,7 @@ function LeftPanel() {
     return (
         <header className="left-panel">
             <div>
+                <img src={logo} alt="Santiago Lordi Logo" className="logo" />
                 <h1>Santiago Lordi</h1>
                 <h2>Full-Stack Software Engineer</h2>
                 <p className="bio">
